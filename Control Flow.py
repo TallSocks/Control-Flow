@@ -15,8 +15,4 @@ lastName = input("What is your last name: ")
 print("\nWelcome to Cash-R-Us,", firstName,lastName + ", we will now set up a security pin on your account. \n")
 pin = input("Please choose a 4 digit security pin: ")
 
-print("\n*************************************************\n")
-"""
-this part of the program will be simulation walking up to the ATM after setting up an account
-this is where the if elif and else statements will be used
-"""
+print("hello world")
