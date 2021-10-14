@@ -12,7 +12,15 @@ print("Welcome to Cash-R-Us Bank\nLet's take a moment to set up your account\n")
 # Set up account by asking users for first and last names using Variables
 firstName = input("What is your first name: ")
 lastName = input("What is your last name: ")
-print("\nWelcome to Cash-R-Us,", firstName,lastName + ", we will now set up a security pin on your account. \n")
-pin = input("Please choose a 4 digit security pin: ")
-
-print("hello world")
+print("\nWelcome to Cash-R-Us", firstName,lastName + ", we will now set up a security pin on your account. \n")
+# set up a PIN - personal identification number
+pin = input("Please choose a 4-digit Personal Identification Number: ")
+print("\nThank you", firstName, lastName + ", your pin is set to", pin)
+"""
+# confirming correct pin
+ans = input("is that correct? Y for yes or N for No: ")
+if ans == "y"
+    print("your pin has been saved as", pin)
+elif ans == "n"
+    print("please retype your pin")
+"""
