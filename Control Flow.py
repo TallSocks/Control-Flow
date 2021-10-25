@@ -16,16 +16,24 @@ print("\nWelcome to Cash-R-Us", firstName,lastName + ", we will now set up a sec
 # set up a PIN - personal identification number
 pin = input("Please choose a 4-digit Personal Identification Number: ")
 print("\nThank you", firstName, lastName + ", your pin is set to", pin)
-"""
-# IDEA FOR LATER
+
+
 # confirming correct pin
 ans = input("is that correct? Y for yes or N for No: ")
-if ans == "y"
+if ans == "y":
     print("your pin has been saved as", pin)
-elif ans == "n"
+    print("\nWould you like to make a transaction through our Automated Teller Machine?")
+    ansr = input("Y for Yes, N for No:").lower()
+    balance = 100
+    if ansr == "y":
+        print("\n********************************************************************\n")
+        print("\n your balalce is $" + str(balance))
+
+    else:
+        print("\nThank you for visiting Cash-R-Us ATM", firstName, lastName)
+else:
     print("please retype your pin")
-"""
-print("\nWould you like to make a transaction through our Automated Teller Machine:")
-"""
-print input("\nY for Yes \nN for No")
-"""
+
+
+
+
