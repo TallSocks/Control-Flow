@@ -12,11 +12,10 @@ print("Welcome to Cash-R-Us Bank\nLet's take a moment to set up your account\n")
 # Set up account by asking users for first and last names using Variables
 firstName = input("What is your first name: ")
 lastName = input("What is your last name: ")
-print("\nWelcome to Cash-R-Us", firstName,lastName + ", we will now set up a security pin on your account. \n")
+print("\nWelcome to Cash-R-Us", firstName, lastName + ", we will now set up a security pin on your account. \n")
 # set up a PIN - personal identification number
 pin = input("Please choose a 4-digit Personal Identification Number: ")
 print("\nThank you", firstName, lastName + ", your pin is set to", pin)
-
 
 # confirming correct pin
 ans = input("is that correct? Y for yes or N for No: ")
@@ -29,7 +28,7 @@ if ans == "y":
     # withdrawal or deposit using if elif
     if ansr == "y":
         print("\n********************************************************************\n")
-        print("\n your balalce is $" + str(balance))
+        print("\nyour balalce is $" + str(balance))
         print("would you make a withdrawal or deposit?")
         transaction = input("\nW for Withdrawal D for deposit: ").lower()
         amount = int(input("enter an amount: $"))
@@ -37,13 +36,13 @@ if ans == "y":
             balance = balance - amount
         elif transaction == "d":
             balance = balance + amount
-            
+        # print new balance
+        if balance < 0:
+            print("you cannot have a negative balance")
+        else:
+            print("\n Your final balance is $" + str(balance))
 
     else:
         print("\nThank you for visiting Cash-R-Us ATM", firstName, lastName)
 else:
     print("please retype your pin")
-
-
-
-
