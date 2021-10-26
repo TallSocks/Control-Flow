@@ -22,12 +22,22 @@ print("\nThank you", firstName, lastName + ", your pin is set to", pin)
 ans = input("is that correct? Y for yes or N for No: ")
 if ans == "y":
     print("your pin has been saved as", pin)
+    # making the transaction
     print("\nWould you like to make a transaction through our Automated Teller Machine?")
     ansr = input("Y for Yes, N for No:").lower()
     balance = 100
+    # withdrawal or deposit using if elif
     if ansr == "y":
         print("\n********************************************************************\n")
         print("\n your balalce is $" + str(balance))
+        print("would you make a withdrawal or deposit?")
+        transaction = input("\nW for Withdrawal D for deposit: ").lower()
+        amount = int(input("enter an amount: $"))
+        if transaction == "w":
+            balance = balance - amount
+        elif transaction == "d":
+            balance = balance + amount
+            
 
     else:
         print("\nThank you for visiting Cash-R-Us ATM", firstName, lastName)
