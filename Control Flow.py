@@ -22,27 +22,36 @@ ans = input("is that correct? Y for yes or N for No: ")
 if ans == "y":
     print("your pin has been saved as", pin)
     # making the transaction
-    print("\nWould you like to make a transaction through our Automated Teller Machine?")
-    ansr = input("Y for Yes, N for No:").lower()
-    balance = 100
-    # withdrawal or deposit using if elif
-    if ansr == "y":
-        print("\n********************************************************************\n")
-        print("\nyour balalce is $" + str(balance))
-        print("would you make a withdrawal or deposit?")
-        transaction = input("\nW for Withdrawal D for deposit: ").lower()
-        amount = int(input("enter an amount: $"))
-        if transaction == "w":
-            balance = balance - amount
-        elif transaction == "d":
-            balance = balance + amount
-        # print new balance
-        if balance < 0:
-            print("you cannot have a negative balance")
-        else:
-            print("\n Your final balance is $" + str(balance))
+    userPin = input("\nplease enter your 4 digit security pin: ")
+    if pin == userPin:
+        print("Welcome", firstName, lastName, "\nwould you like to make a transaction through our Automated Teller "
+                                              "Machine?")
+        ansr = input("Y for Yes, N for No:").lower()
+        balance = 100
+        # withdrawal or deposit using if elif
+        if ansr == "y":
+            print("\n********************************************************************\n")
+            print("\nyour balance is $" + str(balance))
+            print("would you make a withdrawal or deposit?")
+            transaction = input("\nW for Withdrawal D for deposit: ").lower()
+            amount = int(input("enter an amount: $"))
+            if transaction == "w":
+                balance = balance - amount
+            elif transaction == "d":
+                balance = balance + amount
+            # print new balance
+            if balance < 0:
+                print("you cannot have a negative balance")
+            else:
+                print("\n Your final balance is $" + str(balance))
+    else:
+        print("sorry, your pin doesn't match our records, please try again")
+        # for userPin in pin:
+            
 
+"""
     else:
         print("\nThank you for visiting Cash-R-Us ATM", firstName, lastName)
+  """
 else:
     print("please retype your pin")
