@@ -47,14 +47,11 @@ if ans == "y":
     else:
         print("sorry, your pin doesn't match our records, please try again")
 
-
-
-
-            
-
 """
+
     else:
         print("\nThank you for visiting Cash-R-Us ATM", firstName, lastName)
-  """
+# WHY ISN'T IT NESTING HJFGJFKFHGF
 else:
     print("please retype your pin")
+"""
