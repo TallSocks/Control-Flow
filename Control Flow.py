@@ -20,7 +20,8 @@ print("\nThank you", firstName, lastName + ", your pin is set to", pin)
 # confirming correct pin
 ans = input("is that correct? Y for yes or N for No: ")
 while ans == "n":
-    ans = input("please enter your pin: ")
+    pin = input("please enter your pin: ")
+    ans = input("is that correct? Y for yes or N for No: ")
 if ans == "y":
     confirm = input("please confirm pin: ")
     if pin == confirm:
