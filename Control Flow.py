@@ -41,17 +41,17 @@ if ans == "y":
                 balance = balance + amount
             # print new balance
             if balance < 0:
-                print("you cannot have a negative balance")
+                print("you cannot have a negative balance, your current balance is" + str(balance))
             else:
                 print("\n Your final balance is $" + str(balance))
-    else:
-        print("sorry, your pin doesn't match our records, please try again")
+        else:
+            print("\nThank you for visiting Cash-R-Us ATM", firstName, lastName)
 
-"""
+    elif pin != userPin:
+        print("sorry, your pin doesn't match our records")
+        while pin != userPin:
+            userPin = input("\nplease enter your pin:")
 
-    else:
-        print("\nThank you for visiting Cash-R-Us ATM", firstName, lastName)
-# WHY ISN'T IT NESTING HJFGJFKFHGF
+
 else:
-    print("please retype your pin")
-"""
+    print("please restart")
