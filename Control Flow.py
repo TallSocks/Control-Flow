@@ -31,6 +31,8 @@ if ans == "y":
         print("\n****************************************************************")
         print("\nWelcome to Cash-R-Us bank")
         userPin = input("\nplease enter your 4 digit security pin: ")
+        while pin != userPin:
+            userPin = input("\nyour pin does not match our records. please enter your pin:")
         if pin == userPin:
             print("Welcome", firstName, lastName, "\nwould you like to make a transaction through our Automated Teller "
                                                   "Machine?")
@@ -45,23 +47,13 @@ if ans == "y":
                 amount = int(input("enter an amount: $"))
                 if transaction == "w":
                     balance = balance - amount
-                    """
-                    # crying pls idk what to do 
-                    while balance < 0:
-                        print("you cannot have a negative balance")
-                        amount = int(input("please enter an amount: $"))
-                        """
-
                 elif transaction == "d":
                     balance = balance + amount
+                if balance < 0:
+                    print("you cannot have a negative balance")
             # print new balance
 
             else:
                 print("\nYour final balance is $" + str(balance))
 
-"""
-    elif pin != userPin:
-        print("sorry, your pin doesn't match our records")
-        while pin != userPin:
-            userPin = input("\nplease enter your pin:")
-"""
+
