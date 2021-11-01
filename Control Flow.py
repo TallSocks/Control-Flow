@@ -51,9 +51,6 @@ if ans == "y":
                     balance = balance + amount
                 if balance < 0:
                     print("you cannot have a negative balance")
-            # print new balance
-
-            else:
                 print("\nYour final balance is $" + str(balance))
 
 
